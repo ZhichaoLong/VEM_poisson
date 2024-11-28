@@ -7,7 +7,7 @@ from VEM_1.count_number import Count_number
 from VEM_1.gauss_triangle import Triangle_Gauss_reference_2D
 from VEM_1.quad_gauss import Gauss_reference_2D_quad, Gauss_local_quad
 from VEM_1.quadrangle_mesh import quadrangle_mesh_2D
-from poisson_2D.Gauss_point_coefficient import Generate_Gauss_reference_2D
+
 
 
 class VEM_error:
