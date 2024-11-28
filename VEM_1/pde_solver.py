@@ -23,10 +23,10 @@ nk=count.dim_p_k(k,d)
 
 #获取矩形网格
 mesh=quadrangle_mesh_2D(domain)
-node,cell=mesh.rectangle(nx,ny,2)#输入nx，ny，以及内部等分数n
+node,cell=mesh.rectangle(nx,ny,2)#输入nx，ny，以及内部等分数n,当k=1时设置为0，这里取巧了，因为只打算算到二次多项式，应该用高斯点，以后再改吧
 vertices=mesh.rectangle_vertices(node,cell)#一个三维数组，存了所有单元的四个顶点的坐标
 
-boundary_x,boundary_y=mesh.boundary_retangle(nx,ny,1)
+boundary_x,boundary_y=mesh.boundary_retangle(nx,ny,k-1)
 boundary_x=boundary_x.astype(int)
 boundary_y=boundary_y.astype(int)
 #需要每个单元的质心，直径，面积
